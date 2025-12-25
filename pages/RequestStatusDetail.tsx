@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Api } from '../services/mockApi';
+import { Api } from '../services/api';
 import { HelpRequest, RequestStatus, User, UserRole } from '../types';
 import { ChatComponent } from '../components/ChatComponent';
 

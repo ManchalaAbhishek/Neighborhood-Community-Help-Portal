@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Api } from '../services/mockApi';
+import { Api } from '../services/api';
 import { CATEGORIES, User } from '../types';
 
 interface HelpRequestFormProps {
