@@ -1,0 +1,103 @@
+/* Global Design System */
+:root {
+  /* Pastel Palette */
+  --pastel-blue: #e0f2fe;
+  --pastel-blue-dark: #7dd3fc;
+  --pastel-lavender: #f3e8ff;
+  --pastel-lavender-dark: #d8b4fe;
+  --pastel-mint: #f0fdf4;
+  --pastel-mint-dark: #86efac;
+  --pastel-peach: #fff7ed;
+  --pastel-peach-dark: #fdba74;
+  
+  --bg-main: #f8fafc;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  
+  --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --card-shadow-hover: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --radius-lg: 16px;
+  --radius-md: 12px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', 'Inter', 'Roboto', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Base Card Styling Override */
+.mat-mdc-card {
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--card-shadow) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.mat-mdc-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow-hover) !important;
+}
+
+/* Form Styles */
+.mat-mdc-form-field {
+  width: 100%;
+}
+
+.mat-mdc-form-field-focus-fill {
+  background-color: white !important;
+}
+
+/* Buttons */
+.mat-mdc-raised-button.mat-primary {
+  background-color: var(--pastel-blue-dark) !important;
+  color: #0369a1 !important;
+  border-radius: var(--radius-md) !important;
+  font-weight: 600 !important;
+}
+
+/* Badge/Chips */
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.status-pending { background: var(--pastel-peach); color: #9a3412; border: 1px solid var(--pastel-peach-dark); }
+.status-accepted { background: var(--pastel-blue); color: #0369a1; border: 1px solid var(--pastel-blue-dark); }
+.status-inprogress { background: var(--pastel-lavender); color: #7e22ce; border: 1px solid var(--pastel-lavender-dark); }
+.status-completed { background: var(--pastel-mint); color: #15803d; border: 1px solid var(--pastel-mint-dark); }
+
+/* Animation Utils */
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
